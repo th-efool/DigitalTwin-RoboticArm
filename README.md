@@ -18,6 +18,17 @@ The result is a **low-latency digital twin** suitable for visualization, simulat
 
 This project is intended for **robotics development workflows**, not as a game-oriented animation system.
 
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/th-efool/DigitalTwin/blob/main/Assets/screenshot20251230092305.png?raw=true" width="100%">
+    </td>
+    <td align="center">
+      <img src="https://github.com/th-efool/DigitalTwin/blob/main/Assets/screenshot20251230092419.png?raw=true" width="100%">
+    </td>
+  </tr>
+</table>
+
 ---
 
 ## Core Capabilities
@@ -95,6 +106,25 @@ This project **does not rely on default realvirtual motion logic** and instead u
 - **Extensible architecture** for future feedback/control loops
 
 ---
+## Inverse Kinematics & 6-DOF Control Challenges
+
+One of the most technically challenging aspects of this project was supporting a **6-degree-of-freedom (6-DOF) robotic arm**, particularly for **pick-and-place operations**.
+
+Unlike forward kinematics—where joint angles directly determine the end-effector pose—inverse kinematics (IK) requires computing multiple valid joint configurations that achieve a desired position and orientation in 3D space. For a 6-DOF arm, this problem is **non-linear, under-constrained in some regions, and singular in others**.
+
+### Key Challenges Addressed
+
+- **Multiple IK Solutions**  
+  A single end-effector pose can map to several valid joint configurations. The system must consistently select a stable solution to avoid sudden joint flips or discontinuities.
+
+- **Singularities & Joint Limits**  
+  Certain arm configurations cause loss of rotational freedom or extreme joint velocities. These cases were handled by enforcing joint constraints and rejecting unstable solutions.
+
+- **Orientation + Position Coupling**  
+  Pick-and-place tasks require not only positional accuracy but also correct tool orientation, significantly increasing the complexity compared to position-only IK.
+
+- **Real-Time Constraints**  
+  IK solutions must be computed fast enough to keep the Unity digital twin synchronized with the physical arm without introducing latency or jitter.
 
 ## Use Cases
 
