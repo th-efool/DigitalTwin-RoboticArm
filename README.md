@@ -13,16 +13,15 @@
 
 **Unity Robotic Arm Digital Twin** is a real-time synchronization system that mirrors a physical robotic arm inside **Unity** with a one-to-one correspondence between hardware state and virtual representation.
 
-The system streams live telemetry—such as joint angles, encoder values, velocities, or end-effector poses—from the physical robot and applies them directly to a virtual arm model in Unity.  
-The result is a **low-latency digital twin** suitable for visualization, simulation, diagnostics, and remote monitoring.
-
-This project is intended for **robotics development workflows**, not as a game-oriented animation system.
-
 <table>
     <td align="center">
       <img src="https://github.com/th-efool/DigitalTwin/blob/main/Assets/screenshot20251230092305.png?raw=true" width="100%">
     </td>
 </table>
+The system streams live telemetry—such as joint angles, encoder values, velocities, or end-effector poses—from the physical robot and applies them directly to a virtual arm model in Unity.  
+The result is a **low-latency digital twin** suitable for visualization, simulation, diagnostics, and remote monitoring.
+
+This project is intended for **robotics development workflows**, not as a game-oriented animation system.
 
 ---
 
