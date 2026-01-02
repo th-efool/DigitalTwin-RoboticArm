@@ -19,14 +19,9 @@ The result is a **low-latency digital twin** suitable for visualization, simulat
 This project is intended for **robotics development workflows**, not as a game-oriented animation system.
 
 <table>
-  <tr>
     <td align="center">
       <img src="https://github.com/th-efool/DigitalTwin/blob/main/Assets/screenshot20251230092305.png?raw=true" width="100%">
     </td>
-    <td align="center">
-      <img src="https://github.com/th-efool/DigitalTwin/blob/main/Assets/screenshot20251230092419.png?raw=true" width="100%">
-    </td>
-  </tr>
 </table>
 
 ---
